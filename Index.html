@@ -1,0 +1,76 @@
+<html>
+<head>
+    <link rel="stylesheet" href="Styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="Styles/index.css" />
+    <link href="Styles/flat-ui.css" rel="stylesheet">
+    <link href="Styles/demo.css" rel="stylesheet">
+
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/jquery.backstretch.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/flat-ui.min.js"></script>
+    <script src="Scripts/application.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $.backstretch([
+               "Images/1.jpg",
+               "Images/2.jpg",
+               "Images/3.jpg"
+            ], {
+                fade: 750,
+                duration: 4000
+            });
+
+            $('#ck1').on('switchChange.bootstrapSwitch', function (event) {
+                var audioEle = $("#audioId")[0];
+                if ($(this).is(':checked')) {
+                    audioEle.play();            
+                }
+                else {
+                    audioEle.pause();
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <h1 style="color:white; font-weight:bold; font-size:55px;">这里只有你自己</h1>
+        <h2 style="color:white; font-weight:bold; font-size:16px; margin-top:30px;">摘下面具，撕掉虚伪，想想最真实的自己。</h2>
+    </div>
+    <div style="display:none;">
+        <audio id="audioId" loop controls autoplay src="Songs/Song.mp3"></audio>
+    </div>
+    <div class="row">
+        <div class="col-md-2" style="margin-left:10px;margin-top:10px;">
+            <div class="share mrl">
+                <ul>
+                    <li>
+                        <label class="share-label" for="share-toggle2">爱情转移</label>
+                        <input type="checkbox" data-toggle="switch" id="ck1" checked=""/>
+                    </li>
+                    <li>
+                        <label class="share-label" for="share-toggle4">Twitter</label>
+                        <input type="checkbox" data-toggle="switch" />
+                    </li>
+                    <li>
+                        <label class="share-label" for="share-toggle6">Pinterest</label>
+                        <input type="checkbox" data-toggle="switch" />
+                    </li>
+                    <li>
+                        <label class="share-label" for="share-toggle6">Pinterest</label>
+                        <input type="checkbox" data-toggle="switch" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-10"></div>
+
+
+    </div>
+    <input type="hidden" value="0" id="videoH1" />
+
+</body>
+</html>
