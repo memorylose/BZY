@@ -1,5 +1,7 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
+    <title>私人空间，白噪音</title>
     <link rel="stylesheet" href="Styles/bootstrap.min.css" />
     <link rel="stylesheet" href="Styles/index.css" />
     <link href="Styles/flat-ui.css" rel="stylesheet">
@@ -23,9 +25,45 @@
             });
 
             $('#ck1').on('switchChange.bootstrapSwitch', function (event) {
-                var audioEle = $("#audioId")[0];
+                var audioEle = $("#audio1Id")[0];
                 if ($(this).is(':checked')) {
-                    audioEle.play();            
+                    audioEle.play();
+                }
+                else {
+                    audioEle.pause();
+                }
+            });
+            $('#ck2').on('switchChange.bootstrapSwitch', function (event) {
+                var audioEle = $("#audio2Id")[0];
+                if ($(this).is(':checked')) {
+                    audioEle.play();
+                }
+                else {
+                    audioEle.pause();
+                }
+            });
+            $('#ck3').on('switchChange.bootstrapSwitch', function (event) {
+                var audioEle = $("#audio3Id")[0];
+                if ($(this).is(':checked')) {
+                    audioEle.play();
+                }
+                else {
+                    audioEle.pause();
+                }
+            });
+            $('#ck4').on('switchChange.bootstrapSwitch', function (event) {
+                var audioEle = $("#audio4Id")[0];
+                if ($(this).is(':checked')) {
+                    audioEle.play();
+                }
+                else {
+                    audioEle.pause();
+                }
+            });
+            $('#ck5').on('switchChange.bootstrapSwitch', function (event) {
+                var audioEle = $("#audio5Id")[0];
+                if ($(this).is(':checked')) {
+                    audioEle.play();
                 }
                 else {
                     audioEle.pause();
@@ -41,27 +79,35 @@
         <h2 style="color:white; font-weight:bold; font-size:16px; margin-top:30px;">摘下面具，撕掉虚伪，想想最真实的自己。</h2>
     </div>
     <div style="display:none;">
-        <audio id="audioId" loop controls autoplay src="Songs/Song.mp3"></audio>
+        <audio id="audio1Id" loop controls autoplay src="Songs/rain.ogg"></audio>
+        <audio id="audio2Id" loop controls src="Songs/heavyrain.ogg"></audio>
+        <audio id="audio3Id" loop controls src="Songs/beach.ogg"></audio>
+        <audio id="audio4Id" loop controls src="Songs/forestbird.ogg"></audio>
+        <audio id="audio5Id" loop controls src="Songs/Creek.ogg"></audio>
     </div>
     <div class="row">
         <div class="col-md-2" style="margin-left:10px;margin-top:10px;">
             <div class="share mrl">
                 <ul>
                     <li>
-                        <label class="share-label" for="share-toggle2">爱情转移</label>
-                        <input type="checkbox" data-toggle="switch" id="ck1" checked=""/>
+                        <label class="share-label" for="share-toggle2">小雨</label>
+                        <input type="checkbox" data-toggle="switch" id="ck1" checked="" />
                     </li>
                     <li>
-                        <label class="share-label" for="share-toggle4">Twitter</label>
-                        <input type="checkbox" data-toggle="switch" />
+                        <label class="share-label" for="share-toggle4">大雨</label>
+                        <input type="checkbox" data-toggle="switch" id="ck2" />
                     </li>
                     <li>
-                        <label class="share-label" for="share-toggle6">Pinterest</label>
-                        <input type="checkbox" data-toggle="switch" />
+                        <label class="share-label" for="share-toggle6">沙滩</label>
+                        <input type="checkbox" data-toggle="switch" id="ck3" />
                     </li>
                     <li>
-                        <label class="share-label" for="share-toggle6">Pinterest</label>
-                        <input type="checkbox" data-toggle="switch" />
+                        <label class="share-label" for="share-toggle6">森林</label>
+                        <input type="checkbox" data-toggle="switch" id="ck4" />
+                    </li>
+                    <li>
+                        <label class="share-label" for="share-toggle6">小溪</label>
+                        <input type="checkbox" data-toggle="switch" id="ck5" />
                     </li>
                 </ul>
             </div>
